@@ -55,9 +55,9 @@ return [
         'mysql' => [
             'driver'    => 'mysql',
             'host'      => env('DB_HOST', 'localhost'),
-            'database'  => env('DB_DATABASE', 'symfony3'),
-            'username'  => env('DB_USERNAME', 'vetal'),
-            'password'  => env('DB_PASSWORD', '000555'),
+            'database'  => env('DB_DATABASE', 'laravel-blog'),
+            'username'  => env('DB_USERNAME', 'root'),
+            'password'  => env('DB_PASSWORD', 'vetal0783'),
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
