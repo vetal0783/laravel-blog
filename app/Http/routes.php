@@ -55,8 +55,16 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('about', 'PagesController@getAbout');
     Route::get('/', 'PagesController@getIndex');
     Route::resource('posts', 'PostController');
+	
+	Route::get('users', ['uses' => 'UserController@getIndex', 'as' => 'users.index']);
 });
 
 Route::get('/phpinfo', function() {
     return phpinfo();
+});
+
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+
+    Route::get('/home', 'HomeController@index');
 });

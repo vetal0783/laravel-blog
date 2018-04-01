@@ -16,6 +16,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="{{ Request::is('/') ? "active" : "" }}"><a href="/">Home</a></li>
+        <li class="{{ Request::is('home') ? "active" : "" }}"><a href="/home">Home2</a></li>
         <li class="{{ Request::is('blog') ? "active" : "" }}"><a href="/blog">Blog</a></li>
         <li class="{{ Request::is('about') ? "active" : "" }}"><a href="/about">About</a></li>
         <li class="{{ Request::is('contact') ? "active" : "" }}"><a href="/contact">Contact</a></li>
@@ -29,6 +30,7 @@
             <li><a href="{{ route('posts.index') }}">Posts</a></li>
             <li><a href="{{ route('categories.index') }}">Categories</a></li>
             <li><a href="{{ route('tags.index') }}">Tags</a></li>
+            <li><a href="{{ route('users.index') }}">Users</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="{{ route('logout') }}">Logout</a></li>
           </ul>

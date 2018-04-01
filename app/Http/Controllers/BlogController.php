@@ -10,7 +10,7 @@ class BlogController extends Controller {
 
     public function getIndex() {
 
-        $posts = Post::paginate(51);
+        $posts = Post::paginate(3);
 
 //        dd($posts);
 //        var_dump($posts);
@@ -21,7 +21,8 @@ class BlogController extends Controller {
     public function getSingle($slug) {
         // fetch from the DB based on slug
         $post = Post::where('slug', '=', $slug)->first();
-//        dd($post);
+//        dd(Post::class);
+		
         // return the view and pass in the post object
         return view('blog.single')->withPost($post);
     }
