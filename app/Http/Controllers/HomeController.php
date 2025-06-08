@@ -15,10 +15,10 @@ class HomeController extends Controller {
 //		$access = $request->user()->authorizeRoles(['employee', 'manager']);
 		$access = $request->user()->authorizeRoles(['employee']);
 
-		if (!$access) {
-			Session::flash('danger', 'Allowed only for Manageres');
-			return redirect('/contact');
-		}
+                if (!$access) {
+                        Session::flash('danger', 'Allowed only for Managers.');
+                        return redirect('/contact');
+                }
 
 		return view('home');
 	}
